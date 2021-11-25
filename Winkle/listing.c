@@ -39,6 +39,18 @@ int main()
     freeifaddrs( ifaddrs);
 }
 ////////////////////////////////////////////////
-// log:
+// log: gcc -pedantic listing.c && ./a.out
+// +----------------+-----------------+
+// | <ifaddr.h>     | <bits/socket.h> |
+// +----------------+-----------------+
+// | struct ifaddrs | struct sockaddr |
+// | getifaddrs()   |                 |
+// | freeifaddr()   |                 |
+// +----------------+----+------------+--+
+// | <netinet/in.h>      | <netdb.h>     |
+// +---------------------+---------------+
+// | struct sockaddr_in  | getnameinfo() |
+// | struct sockaddr_in6 |               |
+// +---------------------+---------------+
 ////////////////////////////////////////////////
     ////                                ////
