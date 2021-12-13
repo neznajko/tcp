@@ -6,7 +6,6 @@
 # include <arpa/inet.h>
 # include <netdb.h> // getnameinfo, getaddrinfo
 # include <unistd.h> // close
-# include <errno.h>
 ////////////////////////////////////////////////////////////////
 // Socket APIs
 // - socket() Creates endpoint 4 comunication( file descriptor).
