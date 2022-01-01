@@ -2,8 +2,7 @@
 I'm planning becoming a hacker so this is my homework.
 ## Winkle/
 These are examples from the book of **Lewis Van Winkle**,
-
-***Hands-On*** Network Programming with C*
+***Hands-On** Network Programming with C*.
 
 » listing.c, List Network Interfaces
 
