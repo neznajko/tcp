@@ -1,8 +1,11 @@
                       ////
 ////////////////////////////////////////////////
-#include <ifaddrs.h> // interface addresses
-#include <netdb.h>
-#include <stdio.h>
+# include <sys/types.h>
+# include <ifaddrs.h> // interface addresses
+# include <netdb.h>
+////////////////////////////////////////////////
+# include <stdio.h>
+////////////////////////////////////////////////
 int main()
 {
     struct ifaddrs *ifaddrs;
@@ -29,7 +32,7 @@ int main()
             }
             default: continue;
         }
-        char host[64];
+        char host[ 64];
         getnameinfo( p->ifa_addr, len,
                      host, sizeof host,
                      0, 0, NI_NUMERICHOST);
