@@ -6,7 +6,7 @@ These are examples from the book of **Lewis Van Winkle**,
 
 » listing.c, List Network Interfaces
 
-> winlist.cpp, same but using WinSock libs
+\> winlist.cpp, same but using WinSock libs
 
 » time_server.c, HTTP Local Time Server
 
