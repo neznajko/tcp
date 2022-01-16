@@ -17,3 +17,5 @@ These are examples from the book of **Lewis Van Winkle**,
 ± *toFORK.c*, **toUPPER** using *fork* to handle the requests
 
 « ***toPTHREAD.c***, yet another variant
+
+á lookup.c, *get[addr,name]info* stof
