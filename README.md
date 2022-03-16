@@ -23,3 +23,5 @@ These are examples from the book of **Lewis Van Winkle**,
 £ **simple_udp_[client,server].c**, What is this?
 
 ¿ dns-query.c, Raw *DNS* **request**/*response*.
+
+© web_get.c, http GET request/response
