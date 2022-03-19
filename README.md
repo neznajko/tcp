@@ -25,3 +25,6 @@ These are examples from the book of **Lewis Van Winkle**,
 ¿ dns-query.c, Raw *DNS* **request**/*response*.
 
 © web_get.c, http GET request/response
+
+## lab/
+s t o f
