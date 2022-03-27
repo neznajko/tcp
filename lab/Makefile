@@ -1,15 +1,13 @@
-TARGET = example3
-CFLAGS = -g -fno-stack-protector -pedantic #-m32
+TARGET = execstack
+CFLAGS = -static -pedantic -fno-stack-protector -no-pie -z execstack
 GCC = gcc $(CFLAGS)
 $(TARGET): $(TARGET).o
-	$(GCC) -o $@ $^
+	$(GCC) -ggdb -o $@ $^
 $(TARGET).o: $(TARGET).c
-	$(GCC) -o $@ -c $<
+	$(GCC) -ggdb -o $@ -c $<
 .PHONY: clean dis
 clean:
-	$(RM) $(TARGET) $(TARGET).o
+	@$(RM) -v $(TARGET) $(TARGET).o
 dis: $(TARGET).c
-	gcc -S -fno-asynchronous-unwind-tables $^
+	$(GCC) -S -fno-asynchronous-unwind-tables $^
 ################################################################
-#
-#
