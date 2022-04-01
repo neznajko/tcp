@@ -18,7 +18,7 @@
 // https://nekosecurity.com/x86-64-shellcoding/
 // part-1-introduction-to-x86_64-shellcoding
 ////////////////////////////////////////////////////////////////
-int main( int arc, char *argv[]) {
+int main( int argc, char *argv[]) {
     u_char bufr[64] =
         "\x48\x8b\x45\xb0"
         "\x48\x83\xc0\x08"
