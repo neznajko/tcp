@@ -1,4 +1,4 @@
-TARGET = execstack
+TARGET = shellcode
 CFLAGS = -static -pedantic -fno-stack-protector -no-pie -z execstack
 GCC = gcc $(CFLAGS)
 $(TARGET): $(TARGET).o
