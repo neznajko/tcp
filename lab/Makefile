@@ -1,4 +1,4 @@
-TARGET := overflow-1
+# Compile with TARGET=overflow-2 make, for example
 CFLAGS := -pedantic -fno-stack-protector -no-pie -z execstack
 GCC    := gcc $(CFLAGS)
 ################################################################
