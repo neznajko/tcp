@@ -26,6 +26,8 @@ These are examples from the book of **Lewis Van Winkle**,
 
 © web_get.c, http GET request/response
 
+± webserver/ stuff
+
 ## lab/
 s t o f
 
