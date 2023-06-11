@@ -1,5 +1,4 @@
 # Socket programming
-I'm planning becoming a hacker so this is my homework.
 ## Winkle/
 These are examples from the book of **Lewis Van Winkle**,
 ***Hands-On** Network Programming with C*.
@@ -30,7 +29,3 @@ These are examples from the book of **Lewis Van Winkle**,
 
 ## lab/
 s t o f
-
-## Mohit/
-
-Code from the book *Python Penetration Testing Essentials*, by Mohit.
