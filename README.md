@@ -7,7 +7,7 @@ These are examples from the book of **Lewis Van Winkle**,
 
 \> winlist.cpp, same but using WinSock libs
 
-» time_server.c, HTTP Local Time Server
+» time_server.c( Time_Server.cpp ), HTTP Local Time Server
 
 « tcp_client.c, Terminal Data Relaying TCP Client
 
