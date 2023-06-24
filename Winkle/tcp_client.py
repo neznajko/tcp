@@ -29,28 +29,26 @@ def main( argv ):
         sockets_to_monitor.append( sys.stdin )
     timeout = 1
     print( "To send msg, type somfng and hit Enter." )
+    ##
     while True:
         ready = select.select( sockets_to_monitor,
                                (), (), timeout )[ 0 ]
-        for y in ready:
-            if y is remote_socket:
-                dat = remote_socket.recv( 1024 )
-                print( dat.decode())
-            else:
-                if(( sys.platform == "win32" and msvcrt.kbhit()) or
-                   ( sys.platform != "win32" and y is sys.stdin )):
-                    msg = sys.stdin.readline()
-                    if msg:
-                        remote_socket.send( msg.encode())
-                    else: # ^Z( ^C )
-                        print( "Bye" )
-                        return
+        if remote_socket in ready:
+            dat = remote_socket.recv( 1024 )
+            print( dat.decode())
+        else:
+            if(( sys.platform == "win32" and msvcrt.kbhit()) or
+               sys.stdin in ready ):
+                msg = sys.stdin.readline()
+                if msg:
+                    remote_socket.send( msg.encode())
+                else: # ^D 
+                    print( "Bye" )
+                    return
 ###############################################################`
 if __name__ == '__main__':
     main( sys.argv )
 ###############################################################,
-# python tcp_client.py example.com 80
-# GET / HTTP/1.1
-# Host: example.com
+# I fink I've developed a skill to debug while sleeping:)
 ###############################################################=
 ###############################################################/
