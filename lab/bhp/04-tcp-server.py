@@ -55,7 +55,7 @@ while True: #                                            a veces
     job.start()
 ################################################################
 # log:     Ok before 20 years or something I found peace and was
-#   very happy and excited I quit everything and stared learning
+#  very happy and excited I quit everything and started learning
 # how to draw I have found a pattern that can explain everything
 # I didn't gain anything than hate envy humiliation scorn and so
 # on, do you think I would risk everything if I had copy someone
