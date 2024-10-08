@@ -5,13 +5,13 @@
 ################################################################________
 ################################################################________
 ################################################################________
+NFB = 256 #                                      number of bytes________
+################################################################________
 def constab():
     ''' Construct translation table for hexdump
     '''
-    nfb = 256 #                                  number of bytes
-    def code( c ): return ( '.', c )[ c.isprintable() ]
-    chrlist = [ code( c ) for c in map( chr, range( nfb ))]
-    return ''.join( chrlist )
+    def c( c ): return [ '.', c ][ c.isprintable() ]
+    return ''.join( map( lambda y: c( chr( y )), range( NFB )))
 ################################################################________
 ################################################################________
 TAB = constab()
@@ -20,25 +20,22 @@ TAB = constab()
 ################################################################________
 ################################################################________
 def hexdump( s, length=16, show=True ):
-    if type( s ) == bytes:
-        s = s.decode( encoding='iso_8859-1' )
+    if type( s ) == bytes: s = s.decode( encoding='iso_8859-1' )
     res = []
     for j in range( 0, len( s ), length ):
-        word = s[ j : j + length ]
+        word = s[ j:j + length ]
         printable = word.translate( TAB )
         hexable = map( lambda c: f"{ord( c ):02x}", word )
         hexable = ' '.join( hexable )
-        res.append( f"{j:04x} {hexable:<{length*3}} {printable}" )
-    if show:
-        print( *res, sep='\n' )
-    else:
-        return res
+        res.append( f"{j:04x} {hexable:<{length * 3}} {printable}" )
+    if show: print( *res, sep='\n' )
+    else:    return res
 ################################################################________
 ################################################################________
 ################################################################________
 ################################################################________
 if __name__ == '__main__':
-    hexdump( bytes( range( 256 )))
+    hexdump( bytes( range( NFB )))
 ################################################################________
 ################################################################________
 ################################################################________
